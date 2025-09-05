@@ -1,0 +1,16 @@
+.header{
+    .item{
+        width: 50%;
+    }
+    .item .logo{
+        width: 100px;
+    }
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    .item .item-left{
+        width: 50%;
+        display: flex;
+        justify-content: space-around;
+    }
+}
