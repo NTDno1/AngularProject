@@ -1,16 +1,78 @@
-.header{
-    .item{
-        width: 50%;
-    }
-    .item .logo{
-        width: 100px;
-    }
+/* Header container */
+.header {
     width: 100%;
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    .item .item-left{
-        width: 50%;
-        display: flex;
-        justify-content: space-around;
+    gap: 16px;
+    padding: 12px 20px;
+    background: linear-gradient(90deg, #0f172a, #111827);
+    color: #e5e7eb;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Left/right item blocks take space nicely */
+.header .item {
+    flex: 1 1 0;
+}
+
+/* Logo sizing */
+.header .logo {
+    width: 140px;
+    display: block;
+}
+
+.header .logo .angular-logo {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Right section */
+.header .item-left {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+.header .item-left .item {
+    width: auto;
+    padding: 8px 14px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.06);
+    color: #f3f4f6;
+    transition: background 0.2s ease, transform 0.15s ease;
+    user-select: none;
+}
+
+.header .item-left .item:hover {
+    background: rgba(255, 255, 255, 0.12);
+    transform: translateY(-1px);
+    cursor: pointer;
+}
+
+/* Subtle divider for compact layouts */
+.header .item-left .item + .item {
+    margin-left: 4px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+    .header {
+        padding: 10px 14px;
+        gap: 10px;
+    }
+    .header .logo {
+        width: 110px;
+    }
+    .header .item-left {
+        gap: 8px;
+    }
+    .header .item-left .item {
+        padding: 6px 10px;
+        border-radius: 8px;
+        font-size: 14px;
     }
 }
